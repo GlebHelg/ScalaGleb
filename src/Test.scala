@@ -38,9 +38,13 @@ class SingletonTest(x: Int, y: Int){
 class PublicProtectedPrivateTest{
   val publ = new Public_Class
 
-  import
+  import packages._
 
+  val superClass = new Super
+  //superClass.superF() not work
 
+  val subClass = new Sub
+  //This prints the desired magic
 
 }
 
@@ -61,5 +65,8 @@ object Test {
     println("\n\nTesting st: ")
     val st   = new SingletonTest(10, 20)
 
+
+    println("\n\nTesting pppt: ")
+    val pppt = new PublicProtectedPrivateTest
   }
 }

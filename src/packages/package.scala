@@ -11,16 +11,20 @@ See example below. Assume first class Fruit and three Fruit objects in a package
 */
 
 
-//package Protected{
-//  class Super{
-//    protected def f(){ println("f") }
-//  }
-//
-//  class Sub extends Super{
-//    f() // OK
-//  }
-//
-//  class Other{
-//   //(new Super).f() would throw an error, because f is protected for use in subclasses
-//  }
-//}
+package packages {
+
+  class Super {
+    protected def superF() {
+      println("f")
+    }
+  }
+
+  class Sub extends Super {
+    superF() //OK
+  }
+
+  class Other {
+    //(new Super).f() would throw an error, because f is protected for use in subclasses
+  }
+
+}
