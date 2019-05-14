@@ -34,30 +34,19 @@ class SingletonTest(x: Int, y: Int){
   }
 }
 
-class Outer{
-  class Inner{
-    private def f(){println("f")}
 
-    class InnerMost{
-      f() //OK
-    }
-  }
-  //(new Inner).f() Would throw an error, because private member not accessible from outside of class
+class PublicProtectedPrivateTest{
+  val publ = new Public_Class
+
+  import
+
+
+
 }
 
-package p{
-  class Super{
-    protected def f(){ println("f") }
-  }
 
-  class Sub extends Super{
-    f() // OK
-  }
 
-  class Other{
-    //(new Super).f() would throw an error, because f is protected for use in subclasses
-  }
-}
+
 
 // an object is a member of an anonymous class
 object Test {
