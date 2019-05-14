@@ -2,7 +2,6 @@ import java.io._
 import ObjWithImplicitClass._
 
 
-
 class TestPointAndLocation(){
   val pt = new Point(10, 20);
   println("\nJust created the object...\n")
@@ -25,13 +24,28 @@ class TestObjWithImplicitClass{
   4 times println("Hello")
 }
 
+class SingletonTest(x: Int, y: Int){
+  val point = new Point(x, y)
+  printPoint
+
+  def printPoint{
+    println("\nPoint x location : " + point.x)
+    println("Point y location : " + point.y)
+  }
+}
+
 // an object is a member of an anonymous class
 object Test {
   def main(args: Array[String]){
 
+    println("\n\nTesting tpln: ")
     val tpnl = new TestPointAndLocation();
 
-    val run = new TestObjWithImplicitClass();
+    println("\n\nTesting run: ")
+    val run  = new TestObjWithImplicitClass();
+
+    println("\n\nTesting st: ")
+    val st   = new SingletonTest(10, 20)
 
   }
 }
