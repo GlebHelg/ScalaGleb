@@ -36,21 +36,21 @@ class SingletonTest(x: Int, y: Int){
 
 
 class PublicProtectedPrivateTest{
-  val publ = new Public_Class
 
-  import packages._
+  def publicClasstest {
+    val publ = new Public_Class
+  }
 
-  val superClass = new Super
-  //superClass.superF() not work
+  def protectedClassInPackageTest {
+    import packages._
 
-  val subClass = new Sub
-  //This prints the desired magic
+    val superClass = new Super
+    //superClass.superF() not work
 
+    val subClass = new Sub
+    //This prints the desired magic
+  }
 }
-
-
-
-
 
 // an object is a member of an anonymous class
 object Test {
@@ -65,8 +65,9 @@ object Test {
     println("\n\nTesting st: ")
     val st   = new SingletonTest(10, 20)
 
-
     println("\n\nTesting pppt: ")
     val pppt = new PublicProtectedPrivateTest
+    pppt.publicClasstest
+    pppt.protectedClassInPackageTest // this one prints the f
   }
 }
