@@ -1,4 +1,7 @@
 import java.io._
+import ObjWithImplicitClass._
+
+
 
 class TestPointAndLocation(){
   val pt = new Point(10, 20);
@@ -18,11 +21,17 @@ class TestPointAndLocation(){
   println("\n" + pt)
 }
 
+class TestObjWithImplicitClass{
+  4 times println("Hello")
+}
+
 // an object is a member of an anonymous class
 object Test {
   def main(args: Array[String]){
 
     val tpnl = new TestPointAndLocation();
+
+    val run = new TestObjWithImplicitClass();
 
   }
 }
