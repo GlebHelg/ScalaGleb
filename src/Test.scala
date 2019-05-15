@@ -54,6 +54,22 @@ class PublicProtectedPrivateTest{
   }
 }
 
+class Looper() {
+  def funkyLoops(): Unit = {
+
+    var a = 0
+    while (a > -20) {
+      a -= 1
+      if (a % 2 == 0) {
+        println(a)
+      }
+    }
+
+    println(s"While loop done. a = ${a}")
+
+
+  }
+}
 // an object is a member of an anonymous class
 object Test {
   def main(args: Array[String]){
@@ -68,12 +84,15 @@ object Test {
     //val pppt = new PublicProtectedPrivateTest
     //pppt.publicClasstest
     //pppt.protectedClassInPackageTest // this one prints the f
-    val operators = new Operators(7, 13)
+    //val operators = new Operators(7, 13)
     //operators.arithmetic()
     //operators.relational()
     //operators.logical()
-    operators.bitwise()
+    //operators.bitwise()
+    //var conditionals = new Conditionals(4, 5)
+    //conditionals(5, 5) does not work
 
+    funkyLoops()
 
   }
 }
