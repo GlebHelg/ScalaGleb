@@ -1,3 +1,5 @@
+import java.util.Date
+
 class Functions {
 
   def time() = {
@@ -48,4 +50,15 @@ class Functions {
   var inc     = (x: Int) => x + 1
   var mul     = (x: Int, y: Int) => x * y
   var userDir = () => { System.getProperty("user.dir")}
+
+  //Partially Applied Functions
+  def log(date: Date, message: String) = {
+    println(date + "----" + message)
+  }
+
+  // Currying Functions
+  def strCat(s1: String)(s2: String) = {
+    s1 + s2
+  }
+
 }

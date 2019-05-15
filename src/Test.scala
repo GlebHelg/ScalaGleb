@@ -1,4 +1,5 @@
 import java.io._
+import java.util.Date
 
 import ObjWithImplicitClass._
 import com.sun.org.apache.xalan.internal.xsltc.runtime.Operators
@@ -137,13 +138,34 @@ object Test {
     //  println(s"Factorial of ${a} is : " + funct.factorial2(a))
     //}
 
-    for(b <- List(1, 2, 3, 4)) {
-      println(b, funct.inc(b))
-    }
-    var x = funct.inc(4)-1
-    println(x)
-    println(funct.mul(2,3))
-    println(funct.userDir)
+    //for(b <- List(1, 2, 3, 4)) {
+    //  println(b, funct.inc(b))
+    //}
+    //var x = funct.inc(4)-1
+    //println(x)
+    //println(funct.mul(2,3))
+    //println(funct.userDir)
+
+//    {// This one is not partially applied
+//      val date = new java.util.Date
+//      funct.log(date, "Message1")
+//
+//      Thread.sleep(1000)
+//      funct.log(date, "Message2")
+//
+//      Thread.sleep(1000)
+//      funct.log(date, "Message3")
+//    }
+//    {//This one is partially applied
+//      val date = new java.util.Date()
+//      val logWithDateBound = funct.log(date, _ : String)
+//      logWithDateBound("message1")
+//      Thread.sleep(1000)
+//      logWithDateBound("message2")
+//      Thread.sleep(1000)
+//      logWithDateBound("message3")
+//    }
+    println(funct.strCat("Hello, ")("Scala!"))
 
   }
 }
