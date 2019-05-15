@@ -31,4 +31,20 @@ class Functions {
   // Higher order functions
   def apply(f: Int => String, v: Int) = f(v)
   def layout[A](x: A) = "[" + x.toString() + "]"
+
+
+  //Nested Functions
+  def factorial2(i: Int): Int = {
+    def fact(i: Int, accumulator: Int): Int = {
+      if(i <= 1)
+        accumulator
+      else
+        fact(i - 1, i * accumulator)
+    }
+    fact(i, 1)
+  }
+
+  // Anonymous Functions
+  var inc = (x: Int) => x + 1
+  var mul = (x: Int, y: Int) => x * y
 }

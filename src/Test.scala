@@ -131,7 +131,19 @@ object Test {
     //val i = 10
     //println(s"Factorial of ${i} is: " + funct.factorial(i))
 
-    println(funct.apply(funct.layout, 4))
+    //println(funct.apply(funct.layout, 4))
+
+    //for(a <- List(0, 1, 2, 3, 4, 5)) {
+    //  println(s"Factorial of ${a} is : " + funct.factorial2(a))
+    //}
+
+    for(b <- List(1, 2, 3, 4)) {
+      println(b, funct.inc(b))
+    }
+    var x = funct.inc(4)-1
+    println(x)
+    println(funct.mul(2,3))
+
 
   }
 }
