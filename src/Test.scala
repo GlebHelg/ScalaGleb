@@ -1,5 +1,7 @@
 import java.io._
+
 import ObjWithImplicitClass._
+import com.sun.org.apache.xalan.internal.xsltc.runtime.Operators
 
 
 class TestPointAndLocation(){
@@ -56,18 +58,22 @@ class PublicProtectedPrivateTest{
 object Test {
   def main(args: Array[String]){
 
-    println("\n\nTesting tpln: ")
-    val tpnl = new TestPointAndLocation();
+    //val tpnl = new TestPointAndLocation();
+    //println("\n\nTesting tpln: ")
+    //println("\n\nTesting run: ")
+    //val run  = new TestObjWithImplicitClass();
+    //println("\n\nTesting st: ")
+    //val st   = new SingletonTest(10, 20)
+    //println("\n\nTesting pppt: ")
+    //val pppt = new PublicProtectedPrivateTest
+    //pppt.publicClasstest
+    //pppt.protectedClassInPackageTest // this one prints the f
+    val operators = new Operators(7, 13)
+    //operators.arithmetic()
+    //operators.relational()
+    //operators.logical()
+    operators.bitwise()
 
-    println("\n\nTesting run: ")
-    val run  = new TestObjWithImplicitClass();
 
-    println("\n\nTesting st: ")
-    val st   = new SingletonTest(10, 20)
-
-    println("\n\nTesting pppt: ")
-    val pppt = new PublicProtectedPrivateTest
-    pppt.publicClasstest
-    pppt.protectedClassInPackageTest // this one prints the f
   }
 }
