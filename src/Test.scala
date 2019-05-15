@@ -143,7 +143,7 @@ object Test {
     var x = funct.inc(4)-1
     println(x)
     println(funct.mul(2,3))
-
+    println(funct.userDir)
 
   }
 }

@@ -45,6 +45,7 @@ class Functions {
   }
 
   // Anonymous Functions
-  var inc = (x: Int) => x + 1
-  var mul = (x: Int, y: Int) => x * y
+  var inc     = (x: Int) => x + 1
+  var mul     = (x: Int, y: Int) => x * y
+  var userDir = () => { System.getProperty("user.dir")}
 }
