@@ -67,9 +67,39 @@ class Looper() {
 
     println(s"While loop done. a = ${a}")
 
+    do{
+      a += 1
+      if (a % 2 == 0) {
+        println(a)
+      }
+    }while(a < 20)
 
+    println(s"Dowhile done. a = ${a}")
   }
+
+  def forWithCollections(l: List[Int]): Unit ={
+    var a = 0
+    for(a <- l if a % 2 == 0; if a * 1 == 2){
+      println(s"Value of a: ${a}")
+    }
+  }
+
+  def yieldForLoop(): Unit ={
+    var a = 0
+    var numList = List(1,2,3,4,5,6,7,8,9,10)
+
+    // for loop execution with a yield
+    var retVal = for{ a <- numList if a != 3; if a < 8 }yield a
+
+    // Now print returned values using another loop.
+    for(a <- retVal){
+      println("Value of a: " + a)
+    }
+  }
+
 }
+
+
 // an object is a member of an anonymous class
 object Test {
   def main(args: Array[String]){
@@ -91,8 +121,17 @@ object Test {
     //operators.bitwise()
     //var conditionals = new Conditionals(4, 5)
     //conditionals(5, 5) does not work
+    //var loopman = new Looper()
+    //loopman.funkyLoops()
+    //loopman.forWithCollections(List(2,5,6,87,32))
+    //loopman.yieldForLoop()
+    val funct = new Functions()
+    //funct.delayed(funct.time())
+    //funct.printStrings("Hello", "Scala", "Python")
+    //val i = 10
+    //println(s"Factorial of ${i} is: " + funct.factorial(i))
 
-    funkyLoops()
+    println(funct.apply(funct.layout, 4))
 
   }
 }
